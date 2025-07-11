@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tag on Embedded system Robotics notes</title>
+    <link>http://localhost:1313/tag/</link>
+    <description>Recent content in Tag on Embedded system Robotics notes</description>
+    <generator>Hugo -- 0.148.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 24 Feb 2023 02:56:17 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tag/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Embedded-C</title>
+      <link>http://localhost:1313/tag/embedded-c/</link>
+      <pubDate>Fri, 24 Feb 2023 02:56:17 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/embedded-c/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Esp-Idf</title>
+      <link>http://localhost:1313/tag/esp-idf/</link>
+      <pubDate>Fri, 24 Feb 2023 02:56:17 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/esp-idf/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Esp32</title>
+      <link>http://localhost:1313/tag/esp32/</link>
+      <pubDate>Fri, 24 Feb 2023 02:56:17 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/esp32/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Freertos</title>
+      <link>http://localhost:1313/tag/freertos/</link>
+      <pubDate>Fri, 24 Feb 2023 02:56:17 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/freertos/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Architectre</title>
+      <link>http://localhost:1313/tag/architectre/</link>
+      <pubDate>Mon, 03 Oct 2022 13:44:53 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/architectre/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Arm</title>
+      <link>http://localhost:1313/tag/arm/</link>
+      <pubDate>Mon, 03 Oct 2022 13:44:53 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/arm/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Asm</title>
+      <link>http://localhost:1313/tag/asm/</link>
+      <pubDate>Mon, 03 Oct 2022 13:44:53 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/asm/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Assembly</title>
+      <link>http://localhost:1313/tag/assembly/</link>
+      <pubDate>Mon, 03 Oct 2022 13:44:53 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/assembly/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Cortex-M3</title>
+      <link>http://localhost:1313/tag/cortex-m3/</link>
+      <pubDate>Mon, 03 Oct 2022 13:44:53 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/cortex-m3/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Thumb</title>
+      <link>http://localhost:1313/tag/thumb/</link>
+      <pubDate>Mon, 03 Oct 2022 13:44:53 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/thumb/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Thumb2</title>
+      <link>http://localhost:1313/tag/thumb2/</link>
+      <pubDate>Mon, 03 Oct 2022 13:44:53 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/thumb2/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Cad</title>
+      <link>http://localhost:1313/tag/cad/</link>
+      <pubDate>Thu, 29 Sep 2022 03:30:00 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/cad/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Kicad</title>
+      <link>http://localhost:1313/tag/kicad/</link>
+      <pubDate>Thu, 29 Sep 2022 03:30:00 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/kicad/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Pcb</title>
+      <link>http://localhost:1313/tag/pcb/</link>
+      <pubDate>Thu, 29 Sep 2022 03:30:00 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/pcb/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Pcb-Design</title>
+      <link>http://localhost:1313/tag/pcb-design/</link>
+      <pubDate>Thu, 29 Sep 2022 03:30:00 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/pcb-design/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Stm32</title>
+      <link>http://localhost:1313/tag/stm32/</link>
+      <pubDate>Thu, 29 Sep 2022 03:30:00 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/stm32/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>8051</title>
+      <link>http://localhost:1313/tag/8051/</link>
+      <pubDate>Tue, 27 Sep 2022 03:30:00 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/8051/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Keil</title>
+      <link>http://localhost:1313/tag/keil/</link>
+      <pubDate>Tue, 27 Sep 2022 03:30:00 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/keil/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Edsim51</title>
+      <link>http://localhost:1313/tag/edsim51/</link>
+      <pubDate>Sun, 18 Sep 2022 08:57:43 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/edsim51/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Microcontroller</title>
+      <link>http://localhost:1313/tag/microcontroller/</link>
+      <pubDate>Sun, 18 Sep 2022 08:57:43 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/microcontroller/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Atmega328p</title>
+      <link>http://localhost:1313/tag/atmega328p/</link>
+      <pubDate>Fri, 08 Jul 2022 08:59:21 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/atmega328p/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Avr</title>
+      <link>http://localhost:1313/tag/avr/</link>
+      <pubDate>Fri, 08 Jul 2022 08:59:21 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/avr/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/tag/linux/</link>
+      <pubDate>Sun, 26 Jun 2022 08:23:30 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/linux/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Logic-Analyser</title>
+      <link>http://localhost:1313/tag/logic-analyser/</link>
+      <pubDate>Sun, 26 Jun 2022 08:23:30 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/logic-analyser/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Salae-Logic</title>
+      <link>http://localhost:1313/tag/salae-logic/</link>
+      <pubDate>Sun, 26 Jun 2022 08:23:30 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/salae-logic/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Ubuntu</title>
+      <link>http://localhost:1313/tag/ubuntu/</link>
+      <pubDate>Sun, 26 Jun 2022 08:23:30 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/ubuntu/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Custom-Linux</title>
+      <link>http://localhost:1313/tag/custom-linux/</link>
+      <pubDate>Thu, 16 Jun 2022 03:38:04 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/custom-linux/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Embedded-Linux</title>
+      <link>http://localhost:1313/tag/embedded-linux/</link>
+      <pubDate>Thu, 16 Jun 2022 03:38:04 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/embedded-linux/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Embedded-Systems</title>
+      <link>http://localhost:1313/tag/embedded-systems/</link>
+      <pubDate>Thu, 16 Jun 2022 03:38:04 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/embedded-systems/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Yocto-Linux</title>
+      <link>http://localhost:1313/tag/yocto-linux/</link>
+      <pubDate>Thu, 16 Jun 2022 03:38:04 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/yocto-linux/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Buildroot</title>
+      <link>http://localhost:1313/tag/buildroot/</link>
+      <pubDate>Tue, 01 Oct 2019 10:48:55 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/buildroot/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Raspberry-Pi-Zero-W</title>
+      <link>http://localhost:1313/tag/raspberry-pi-zero-w/</link>
+      <pubDate>Tue, 01 Oct 2019 10:48:55 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/raspberry-pi-zero-w/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Ssh</title>
+      <link>http://localhost:1313/tag/ssh/</link>
+      <pubDate>Tue, 01 Oct 2019 10:48:55 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/ssh/</guid> 
+      <description></description>
+    </item>
+    <item>
+      <title>Wifi</title>
+      <link>http://localhost:1313/tag/wifi/</link>
+      <pubDate>Tue, 01 Oct 2019 10:48:55 +0000</pubDate>
+       <guid isPermaLink="false">http://localhost:1313/tag/wifi/</guid> 
+      <description></description>
+    </item>
+  </channel>
+</rss>

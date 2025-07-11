@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>8051 | Embedded system Robotics notes</title>
+<meta name="keywords" content="">
+<meta name="description" content="Embedded system Robotics notes">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/tag/8051/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3beea2776320e39a6c8d0589cd10cf4cbbbe3ca9b6f0363cfeef1417ed39a195.css" integrity="sha256-O&#43;6id2Mg45psjQWJzRDPTLu&#43;PKm28DY8/u8UF&#43;05oZU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tag/8051/feed.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tag/8051/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Embedded system Robotics notes (Alt + H)">Embedded system Robotics notes</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="">
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍">
+                    <span>🔍</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/tag/">Tag</a></div>
+  <h1>
+    8051
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">8051 - Embedded C Code (Keil C51 IDE)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>using sbit , reading a single pin and writing to output
+#include &lt;reg51.h&gt; sbit sw=P0^1; sbit led =P1^1; // gpio input / output void main(){ sw=1; while(1){ led=sw; } } Mini project: 8051 interfacing with four 7 segment leds , using a timer to count value every 1s
+circuit: (made in proteus)
+7 segment leds are comman anode (active low) , decoder selects one 7 segment display at a time , p3.3 ,p3.4 are connected to decoder input , p2.0- p2.7 are used to write leds.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-09-27 03:30:00 +0000 +0000'>September 27, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to 8051 - Embedded C Code (Keil C51 IDE)" href="http://localhost:1313/2022/09/27/8051-embedded-c-code-keil-c51-ide/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/09/screenshot-2022-09-18-151525.png" alt="Screenshot 2022-09-18 151525">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">8051 assembly code(using edsim51/keil C51 IDE)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Blink an led with delay
+org 00h main:	mov A,#0FFh here:	mov P1,A acall delay mov P1,#0FEH acall delay sjmp heredelay: mov R0,#0FH outer:	mov R1,#0FH inner:	DJNZ R1,inner DJNZ R0,outer Ret End up/ down counter – use same program just inc or dec to get up/down
+org 00h main:	mov A,#0FFh here: mov P1,A acall delay dec A sjmp here delay: mov R0,#0FH outer: mov R1,#0FH inner: DJNZ R1,inner DJNZ R0,outer Ret End Write ‘1’ seven segment display
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-09-18 08:57:43 +0000 +0000'>September 18, 2022</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to 8051 assembly code(using edsim51/keil C51 IDE)" href="http://localhost:1313/2022/09/18/8051-assembly-code/"></a>
+</article>
+    </main>
+    
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+</body>
+
+</html>

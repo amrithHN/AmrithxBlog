@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Posts | Embedded system Robotics notes</title>
+<meta name="keywords" content="">
+<meta name="description" content="Posts - Embedded system Robotics notes">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3beea2776320e39a6c8d0589cd10cf4cbbbe3ca9b6f0363cfeef1417ed39a195.css" integrity="sha256-O&#43;6id2Mg45psjQWJzRDPTLu&#43;PKm28DY8/u8UF&#43;05oZU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/feed.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Embedded system Robotics notes (Alt + H)">Embedded system Robotics notes</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="">
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍">
+                    <span>🔍</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a></div>
+  <h1>
+    Posts
+  </h1>
+</header>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/10/img_20221003_093302.jpg" alt="IMG_20221003_093302">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[2] ARM assembly
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>When it comes to programming Arm in thumb2 instructions there are only a handful of opcodes to be considered
+1.MOV is used to copy data between registers
+ex: MOV R0,R1
+2. Basic load/Store commands: Used to load /store data between memory and Registers
+MOV R2,=0x20000000
+LDR R1,[R2]
+STR [R2],[R3] //ASSUME R3 HAS A VALID ADDRESS
+Variation in LDR and STR include LDRB (load byte), STRB (store byte) , LDRH (Half word 16bit) , STRH (STR half word 16 bit)
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-10-18 17:49:22 +0000 +0000'>October 18, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [2] ARM assembly" href="http://localhost:1313/2022/10/18/2-arm-assembly/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/10/img_20221003_093302.jpg" alt="IMG_20221003_093302">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[1] ARM Minimal Assembly code (cortex m3/m4 &#43; keil IDE)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>ARM processors have supported two different instruction sets: the ARM instructions that are 32 bits and Thumb instructions that are 16 bits. Thumb2 instructuction was introduced later which are 32bit instruction and the processor doesnt have to switch between modes to perform instructions. ARM is faster as it requires less clock cycles for execution whereas Thumb instruction require high code density (ex ARM perform an operation with 3 instructions whereas thumb can do the same with 2 thus saving code space but reducing operating speed since it is 16bit instruction).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-10-03 13:44:53 +0000 +0000'>October 3, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [1] ARM Minimal Assembly code (cortex m3/m4 &#43; keil IDE)" href="http://localhost:1313/2022/10/03/1-arm-minimal-assembly-code-coretx-m3-m4-keil-ide/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">AVR Assembly code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+Simple code example for load and add instruction:
+.equ sum = 0x30 .org 00 main: ldi r16,0xFA ; hex value copy to r16 ldi r17,$AB ; dollar sign to hex ldi r18,0b00001111 ; binary add r16,r17 ; add r16,r17 result r16 ldi r19,11 ; decimal 11 sts sum,r16 ; save value to location 30h (sum is a pointer) here: jmp here AVR MCUs’ are generally fast, they can execute 16MIPS at 16Mhz because of how the busses are designed and also the simplicity of RSIC architecture.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-10-02 04:00:00 +0000 +0000'>October 2, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to AVR Assembly code" href="http://localhost:1313/2022/10/02/avr-assembly-code/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/09/vddvss.png" alt="vddvss">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[1] Stm32f4xx Custom PCB design using KiCAD v6
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Stm32 is a widely popular MCU based on ARM core and I have always been fascinated to work with these tiny powerhouses! This post is a part of the custom PCB design build series and hopefully, I will keep posting about basic hardware design.
+Setup a KiCAD project as usual and we will start with the schematics then will check for parts (Do some initial research on main parts required , passive components can be selected later only the size selection matters at this stage).Add stm32f4xx schematic symbol (Its not difficult to make one if the symbol does not exist). Let us divide the whole schematic into multiple section :
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-09-29 03:30:00 +0000 +0000'>September 29, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [1] Stm32f4xx Custom PCB design using KiCAD v6" href="http://localhost:1313/2022/09/29/1-stm32f4xx-custom-pcb-design-using-kicad-v6/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">8051 - Embedded C Code (Keil C51 IDE)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>using sbit , reading a single pin and writing to output
+#include &lt;reg51.h&gt; sbit sw=P0^1; sbit led =P1^1; // gpio input / output void main(){ sw=1; while(1){ led=sw; } } Mini project: 8051 interfacing with four 7 segment leds , using a timer to count value every 1s
+circuit: (made in proteus)
+7 segment leds are comman anode (active low) , decoder selects one 7 segment display at a time , p3.3 ,p3.4 are connected to decoder input , p2.0- p2.7 are used to write leds.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-09-27 03:30:00 +0000 +0000'>September 27, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to 8051 - Embedded C Code (Keil C51 IDE)" href="http://localhost:1313/2022/09/27/8051-embedded-c-code-keil-c51-ide/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/09/screenshot-2022-09-18-151525.png" alt="Screenshot 2022-09-18 151525">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">8051 assembly code(using edsim51/keil C51 IDE)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Blink an led with delay
+org 00h main:	mov A,#0FFh here:	mov P1,A acall delay mov P1,#0FEH acall delay sjmp heredelay: mov R0,#0FH outer:	mov R1,#0FH inner:	DJNZ R1,inner DJNZ R0,outer Ret End up/ down counter – use same program just inc or dec to get up/down
+org 00h main:	mov A,#0FFh here: mov P1,A acall delay dec A sjmp here delay: mov R0,#0FH outer: mov R1,#0FH inner: DJNZ R1,inner DJNZ R0,outer Ret End Write ‘1’ seven segment display
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-09-18 08:57:43 +0000 +0000'>September 18, 2022</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to 8051 assembly code(using edsim51/keil C51 IDE)" href="http://localhost:1313/2022/09/18/8051-assembly-code/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[Part-1] Yocto Linux Build for Raspberry pi zero w
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+The Yocto Project is an open-source project that delivers a set of tools that create operating system images for embedded Linux systems. The Yocto Project tools are based on the OpenEmbedded (OE) project, which uses the BitBake build tool, to construct complete Linux images. BitBake and OE are combined to form a reference build host known as Poky which includes the following core components. This video will help explain what it’s all about.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-07-23 03:41:45 +0000 +0000'>July 23, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [Part-1] Yocto Linux Build for Raspberry pi zero w" href="http://localhost:1313/2022/07/23/part-1-yocto-linux-build-for-raspberry-pi-zero-w/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[7] Serial Pheripheral Interface(SPI) communication using atmega328 in AVR C
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Refer this blog for more information [credit to author]
+Important registers for SPI
+1.SPCR – SPI Control Register
+2.SPSR – SPI Status Register
+3.SPDR – SPI Data Register
+atmega328 to atmega328p communication using SPI:
+using PB5,4,3,2 for SPI (arduino uno digital pins 13,12,11,10) SCK,MISO,MOSI,SS
+SPI master using atmega328
+#include &lt;avr/io.h&gt; #define F_CPU 16000000 UL#include &lt;util/delay.h&gt; void SPI_init() { //set gpio as input or output for each SPI pins PB5 SCK output, 4 MISO input, 3 MOSI output ,2 SS output DDRB |= (1 &lt;&lt; PB5) | (1 &lt;&lt; PB3) | (1 &lt;&lt; PB2); //output DDRB &amp;= ~(1 &lt;&lt; PB4); PORTB |= (1 &lt;&lt; PB2); //write high to slave, low to send data SPCR = (1 &lt;&lt; SPR0) | (1 &lt;&lt; MSTR) | (1 &lt;&lt; SPE); // |(1&lt;&lt;SPIE);//Master mode f/16 prescale } void Master_send(unsigned char data) { //select slave PORTB &amp;= ~(1 &lt;&lt; PB2); //write zero to ss volatile uint8_t spsr = SPSR; SPDR = data; while (!(SPSR &amp; (1 &lt;&lt; SPIF))); //wait PORTB |= (1 &lt;&lt; PB2); } int main(void) { SPI_init(); while (1) { //do something Master_send(&#39;a&#39;); _delay_ms(2000); } } Code for Slave arduino:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-07-08 08:59:21 +0000 +0000'>July 8, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [7] Serial Pheripheral Interface(SPI) communication using atmega328 in AVR C" href="http://localhost:1313/2022/07/08/7-serial-pheripheral-interfacespi-communication-using-atmega328-in-avr-c/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[6] Analog (ADC)&#43;USART using AVR (atmega328)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I am using LDR (light dependent resistor) to get analog values
+Below is the explanation from datasheet regarding how to use registers to start one time conversion / free running mode.
+A single conversion is started by disabling the Power Reduction ADC bit, PRADC, in ”Minimizing Power Consumption” on page 51 by writing a logical zero to it and writing a logical one to the ADC Start Conversion bit ADSC. This bit stays high as long as the conversion is in progress and will be cleared by hardware when theconversion is completed. If a different data channel is selected while a conversion is in progress, the ADC will finish the current conversion before performing the channel change.
+Alternatively, a conversion can be triggered automatically by various sources. Auto Triggering is enabled by setting the ADC Auto Trigger Enable bit, ADATE in ADCSRA. The trigger source is selected by setting the ADC Trigger Select bits, ADTS in ADCSRB (See description of the ADTS bits for a list of the trigger sources). When a positive edge occurs on the selected trigger signal, the ADC prescaler is reset and a conversion is started.
+This provides a method of starting conversions at fixed intervals. If the trigger signal still is set when the conversion completes, a new conversion will not be started. If another positive edge occurs on the trigger signal during conversion, the edge will be ignored. Note that an Interrupt Flag will be set even if the specific interrupt is
+disabled or the Global Interrupt Enable bit in SREG is cleared. A conversion can thus be triggered without causing an interrupt. However, the Interrupt Flag must be cleared in order to trigger a new conversion at the next interrupt event.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-07-04 09:15:51 +0000 +0000'>July 4, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [6] Analog (ADC)&#43;USART using AVR (atmega328)" href="http://localhost:1313/2022/07/04/6-analog-adcusart-using-avr-atmega328/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[5] AVR C USART transmit with ISR using atmega328
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I am using a very simple buffer to keep characters so they are send when USART UDR0 is ready to transmit using an ISR
+#include &lt;avr/io.h&gt; #define F_CPU 16000000UL #include &lt;avr/interrupt.h&gt; #define BAUD 9600 #define BRC 103 //9600baud #define tx_buffer_size 128 char serialBuffer[tx_buffer_size]; uint8_t serialReadPosition=0; uint8_t serialWritePosition=0; void serialWrite(char c[]); void serialAppend(char c); #include &lt;util/delay.h&gt; #include &lt;avr/interrupt.h&gt; void serialAppend(char c){ serialBuffer[serialWritePosition]=c; serialWritePosition&#43;&#43;; if(serialWritePosition&gt;=tx_buffer_size){ serialWritePosition=0; } } void serialWrite(char c[]){ for(uint8_t i=0;i&lt;strlen(c);i&#43;&#43;){ serialAppend(c[i]); } if (UCSR0A &amp; (1&lt;&lt;UDRE0)) { UDR0=0; } } void USART_init(){ UBRR0H = (BRC&gt;&gt;8); UBRR0L = BRC; UCSR0B|=(1&lt;&lt;TXEN0)|(1&lt;&lt;TXCIE0); //1 bit 8 bit data //TX setup UCSR0C |=(1&lt;&lt;UCSZ01)|(1&lt;&lt;UCSZ00); sei(); } void send_char(unsigned char data){ while (!(UCSR0A&amp;(1&lt;&lt;UDRE0))); UDR0 =data; } int main(void){ USART_init(); while(1){ serialWrite(&#34;Welcome to AVR\n&#34;); _delay_ms(1000); } return 0; } ISR(USART_TX_vect){ if(serialReadPosition!=serialWritePosition) { send_char(serialBuffer[serialReadPosition]); serialReadPosition&#43;&#43;; } if(serialReadPosition&gt;=tx_buffer_size) { serialReadPosition=0; } } </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-07-04 08:02:38 +0000 +0000'>July 4, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [5] AVR C USART transmit with ISR using atmega328" href="http://localhost:1313/2022/07/04/5-avr-c-usart-transmit-with-isr-using-atmega328/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/posts/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/posts/page/3/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+</body>
+
+</html>

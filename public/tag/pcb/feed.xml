@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Pcb on Embedded system Robotics notes</title>
+    <link>http://localhost:1313/tag/pcb/</link>
+    <description>Recent content in Pcb on Embedded system Robotics notes</description>
+    <generator>Hugo -- 0.148.0</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 29 Sep 2022 03:30:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tag/pcb/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[1] Stm32f4xx Custom PCB design using KiCAD v6</title>
+      <link>http://localhost:1313/2022/09/29/1-stm32f4xx-custom-pcb-design-using-kicad-v6/</link>
+      <pubDate>Thu, 29 Sep 2022 03:30:00 +0000</pubDate>
+       <guid isPermaLink="false">https://armphibian.wordpress.com/?p=268</guid> 
+      <description>&lt;p&gt;Stm32 is a widely popular MCU based on ARM core and I have always been fascinated to work with these tiny powerhouses! This post is a part of the custom PCB design build series and hopefully, I will keep posting about basic hardware design.&lt;/p&gt;
+&lt;p&gt;Setup a KiCAD project as usual and we will start with the schematics then will check for parts (Do some initial research on main parts required , passive components can be selected later only the size selection matters at this stage).Add stm32f4xx schematic symbol (Its not difficult to make one if the symbol does not exist). Let us divide the whole schematic into multiple section :&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

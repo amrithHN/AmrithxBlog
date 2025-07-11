@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Salae-Logic on Embedded system Robotics notes</title>
+    <link>http://localhost:1313/tag/salae-logic/</link>
+    <description>Recent content in Salae-Logic on Embedded system Robotics notes</description>
+    <generator>Hugo -- 0.148.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Jun 2022 08:23:30 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tag/salae-logic/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Saleae Logic Analyser Clone with Ubuntu Linux</title>
+      <link>http://localhost:1313/2022/06/26/saleae-logic-analyser-clone-with-ubuntu-linux/</link>
+      <pubDate>Sun, 26 Jun 2022 08:23:30 +0000</pubDate>
+       <guid isPermaLink="false">https://armphibian.wordpress.com/?p=167</guid> 
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/wp-content/uploads/2022/06/screenshot-from-2022-06-26-13-51-46.png?w=1024&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://www.saleae.com/logic&#34;&gt;Saleae Logic&lt;/a&gt; is an 8 channel 24MHz logic analyser.  Soon after its launch people in China opened them up to find that they are pretty simple inside and, as sure as night follows day, little workshops in Shenzen started producing clones impossibly cheaply and to be sold through eBay, AliExpress, etc&lt;/p&gt;
+&lt;p&gt;Follow this &lt;a href=&#34;https://sigrok.org/wiki/Linux#Distribution_packages&#34;&gt;link&lt;/a&gt; for excellent instruction on other distros and requirements&lt;/p&gt;
+&lt;p&gt;Type the below command to check if the USB was connected successfully!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

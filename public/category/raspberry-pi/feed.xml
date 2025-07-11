@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Raspberry-Pi on Embedded system Robotics notes</title>
+    <link>http://localhost:1313/category/raspberry-pi/</link>
+    <description>Recent content in Raspberry-Pi on Embedded system Robotics notes</description>
+    <generator>Hugo -- 0.148.0</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 01 Oct 2019 10:48:55 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/category/raspberry-pi/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to build Raspberry pi zero w BUILDROOT image</title>
+      <link>http://localhost:1313/2019/10/01/how-to-build-raspberry-pi-zero-w-buildroot-image/</link>
+      <pubDate>Tue, 01 Oct 2019 10:48:55 +0000</pubDate>
+       <guid isPermaLink="false">https://armphibian.wordpress.com/?p=17</guid> 
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/wp-content/uploads/2019/10/img_20191001_154014.jpg?w=1024&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Lately I was reading about embedded linux and came to know about two such custom embedded linux system build sytem the &lt;a href=&#34;https://www.yoctoproject.org/&#34;&gt;Yocto project&lt;/a&gt; and &lt;a href=&#34;https://www.buildroot.org/&#34;&gt;Buildroot&lt;/a&gt;.I wanted to make my own custom linux for raspberyy pi zero W i had in my *ahem* attic.&lt;/p&gt;
+&lt;p&gt;Requirements:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Raspberry pi zero w (ofcourse)&lt;/li&gt;
+&lt;li&gt;A PC (with ubuntu 18.04 or higher)&lt;/li&gt;
+&lt;li&gt;microSD card&lt;/li&gt;
+&lt;li&gt;microSD card reader&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;step-1-preparing-and-downloading-buildroot&#34;&gt;Step 1: Preparing and downloading BUILDROOT&lt;/h2&gt;
+&lt;p&gt;Open Ubuntu terminal (Ctrl+ALT+T) and type the below&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

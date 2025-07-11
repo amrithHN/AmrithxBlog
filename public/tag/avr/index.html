@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Avr | Embedded system Robotics notes</title>
+<meta name="keywords" content="">
+<meta name="description" content="Embedded system Robotics notes">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/tag/avr/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3beea2776320e39a6c8d0589cd10cf4cbbbe3ca9b6f0363cfeef1417ed39a195.css" integrity="sha256-O&#43;6id2Mg45psjQWJzRDPTLu&#43;PKm28DY8/u8UF&#43;05oZU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tag/avr/feed.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tag/avr/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Embedded system Robotics notes (Alt + H)">Embedded system Robotics notes</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="">
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍">
+                    <span>🔍</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/tag/">Tag</a></div>
+  <h1>
+    Avr
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[7] Serial Pheripheral Interface(SPI) communication using atmega328 in AVR C
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Refer this blog for more information [credit to author]
+Important registers for SPI
+1.SPCR – SPI Control Register
+2.SPSR – SPI Status Register
+3.SPDR – SPI Data Register
+atmega328 to atmega328p communication using SPI:
+using PB5,4,3,2 for SPI (arduino uno digital pins 13,12,11,10) SCK,MISO,MOSI,SS
+SPI master using atmega328
+#include &lt;avr/io.h&gt; #define F_CPU 16000000 UL#include &lt;util/delay.h&gt; void SPI_init() { //set gpio as input or output for each SPI pins PB5 SCK output, 4 MISO input, 3 MOSI output ,2 SS output DDRB |= (1 &lt;&lt; PB5) | (1 &lt;&lt; PB3) | (1 &lt;&lt; PB2); //output DDRB &amp;= ~(1 &lt;&lt; PB4); PORTB |= (1 &lt;&lt; PB2); //write high to slave, low to send data SPCR = (1 &lt;&lt; SPR0) | (1 &lt;&lt; MSTR) | (1 &lt;&lt; SPE); // |(1&lt;&lt;SPIE);//Master mode f/16 prescale } void Master_send(unsigned char data) { //select slave PORTB &amp;= ~(1 &lt;&lt; PB2); //write zero to ss volatile uint8_t spsr = SPSR; SPDR = data; while (!(SPSR &amp; (1 &lt;&lt; SPIF))); //wait PORTB |= (1 &lt;&lt; PB2); } int main(void) { SPI_init(); while (1) { //do something Master_send(&#39;a&#39;); _delay_ms(2000); } } Code for Slave arduino:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-07-08 08:59:21 +0000 +0000'>July 8, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [7] Serial Pheripheral Interface(SPI) communication using atmega328 in AVR C" href="http://localhost:1313/2022/07/08/7-serial-pheripheral-interfacespi-communication-using-atmega328-in-avr-c/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[6] Analog (ADC)&#43;USART using AVR (atmega328)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I am using LDR (light dependent resistor) to get analog values
+Below is the explanation from datasheet regarding how to use registers to start one time conversion / free running mode.
+A single conversion is started by disabling the Power Reduction ADC bit, PRADC, in ”Minimizing Power Consumption” on page 51 by writing a logical zero to it and writing a logical one to the ADC Start Conversion bit ADSC. This bit stays high as long as the conversion is in progress and will be cleared by hardware when theconversion is completed. If a different data channel is selected while a conversion is in progress, the ADC will finish the current conversion before performing the channel change.
+Alternatively, a conversion can be triggered automatically by various sources. Auto Triggering is enabled by setting the ADC Auto Trigger Enable bit, ADATE in ADCSRA. The trigger source is selected by setting the ADC Trigger Select bits, ADTS in ADCSRB (See description of the ADTS bits for a list of the trigger sources). When a positive edge occurs on the selected trigger signal, the ADC prescaler is reset and a conversion is started.
+This provides a method of starting conversions at fixed intervals. If the trigger signal still is set when the conversion completes, a new conversion will not be started. If another positive edge occurs on the trigger signal during conversion, the edge will be ignored. Note that an Interrupt Flag will be set even if the specific interrupt is
+disabled or the Global Interrupt Enable bit in SREG is cleared. A conversion can thus be triggered without causing an interrupt. However, the Interrupt Flag must be cleared in order to trigger a new conversion at the next interrupt event.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-07-04 09:15:51 +0000 +0000'>July 4, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [6] Analog (ADC)&#43;USART using AVR (atmega328)" href="http://localhost:1313/2022/07/04/6-analog-adcusart-using-avr-atmega328/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[5] AVR C USART transmit with ISR using atmega328
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I am using a very simple buffer to keep characters so they are send when USART UDR0 is ready to transmit using an ISR
+#include &lt;avr/io.h&gt; #define F_CPU 16000000UL #include &lt;avr/interrupt.h&gt; #define BAUD 9600 #define BRC 103 //9600baud #define tx_buffer_size 128 char serialBuffer[tx_buffer_size]; uint8_t serialReadPosition=0; uint8_t serialWritePosition=0; void serialWrite(char c[]); void serialAppend(char c); #include &lt;util/delay.h&gt; #include &lt;avr/interrupt.h&gt; void serialAppend(char c){ serialBuffer[serialWritePosition]=c; serialWritePosition&#43;&#43;; if(serialWritePosition&gt;=tx_buffer_size){ serialWritePosition=0; } } void serialWrite(char c[]){ for(uint8_t i=0;i&lt;strlen(c);i&#43;&#43;){ serialAppend(c[i]); } if (UCSR0A &amp; (1&lt;&lt;UDRE0)) { UDR0=0; } } void USART_init(){ UBRR0H = (BRC&gt;&gt;8); UBRR0L = BRC; UCSR0B|=(1&lt;&lt;TXEN0)|(1&lt;&lt;TXCIE0); //1 bit 8 bit data //TX setup UCSR0C |=(1&lt;&lt;UCSZ01)|(1&lt;&lt;UCSZ00); sei(); } void send_char(unsigned char data){ while (!(UCSR0A&amp;(1&lt;&lt;UDRE0))); UDR0 =data; } int main(void){ USART_init(); while(1){ serialWrite(&#34;Welcome to AVR\n&#34;); _delay_ms(1000); } return 0; } ISR(USART_TX_vect){ if(serialReadPosition!=serialWritePosition) { send_char(serialBuffer[serialReadPosition]); serialReadPosition&#43;&#43;; } if(serialReadPosition&gt;=tx_buffer_size) { serialReadPosition=0; } } </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-07-04 08:02:38 +0000 +0000'>July 4, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [5] AVR C USART transmit with ISR using atmega328" href="http://localhost:1313/2022/07/04/5-avr-c-usart-transmit-with-isr-using-atmega328/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[4] AVR C PWM (fast PWM, phase correct PWM  )
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I found this wonderful article and another one that explains the theory of PWM and the waveform and where it’s used. Since I don’t think I can improve on that I will leave it there for reference.
+Summary of the above article [ for lazy people like me ;-) ] :
+As the title suggests, there are three PWM modes: Fast PWM, phase correct PWM lastly frequency and phase correct PWM Using a sawtooth and TOP, MAX values pulse width gets manipulated It is used to control DC motor, servo motor etc FAST PWM Use any of the three timers for this purpose for hardware PWM generation . (software generation is another topic to be covered separately)
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-30 10:34:02 +0000 +0000'>June 30, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [4] AVR C PWM (fast PWM, phase correct PWM  )" href="http://localhost:1313/2022/06/30/4-avr-c-pwm-fast-pwm-phase-correct-pwm-and-frequency-phase-correct-pwm/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[3] AVR timer 16 bit in CTC mode - timer 1  atmega328
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> set Timer Control register 1 (TCCR1B since WGM12 should be 1 for CTC) load the value to be compared in Overflow Compare register (OCR1A) enable interrupt for OCIE register using Timer1 Mask register (TIMSK1) enable register and set prescalar (1024 in the below example) use ISR #include &lt;avr/io.h&gt; #include &lt;avr/interrupt.h&gt; //timer 1 16 bit void timer_config(){ TCCR1B|=(1&lt;&lt;WGM12); //CTC mode OCR1A=15625; TIMSK1=(1&lt;&lt;OCIE1A); sei(); TCCR1B|=(1&lt;&lt;CS12)|(1&lt;&lt;CS10);//prescalar 1024 TCCR1B&amp;=~(1&lt;&lt;CS11); } void led_config(){ //PB5 has led and logic analyser connected DDRB|=(1&lt;&lt;PB5); } int main(void){ led_config(); timer_config(); while(1){ } return 0; } ISR(TIMER1_COMPA_vect){ PORTB^=(1&lt;&lt;PB5); } ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-27 10:00:00 +0000 +0000'>June 27, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [3] AVR timer 16 bit in CTC mode - timer 1  atmega328" href="http://localhost:1313/2022/06/27/3-avr-timer-16-bit-in-ctc-mode-timer-1-atmega328/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[2] AVR timer/ counter -- CTC mode
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>There is a TCNTn called timer/Counter Register for each of the timers in AVR. For example, In Atmega32 we have TCNT0, TCNT1 and TCNT2. The TCNTn is basically a counter. It counts up with each pulse. It contains zero when reset. We can read or load any value in the TCNTn register.Each of the timer has TOV called Time Overflow. The TOVn flag is set when the timer overflows, where ‘n’ is the any number of a timer.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-26 10:53:47 +0000 +0000'>June 26, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [2] AVR timer/ counter -- CTC mode" href="http://localhost:1313/2022/06/26/2-avr-timer-counter-ctc-mode/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[1] AVR 8 bit  - GPIO
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>For GPIO only these 3 registers are important for bit manipulation.
+For each port there are three important registers:
+The Data Direction Register (DDRx) determines whether the pins operate as inputs or outputs. The port output register (PORTx) determines the actual value set on each pin when it’s being used as an output. The port input register (PINx) is used for reading input values. x=B,C,D : example DDRB,DDRC,DDRD etc , PORTB,PORTC,PORTD etc , PINB,PINC,PIND etc.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-26 06:37:59 +0000 +0000'>June 26, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [1] AVR 8 bit  - GPIO" href="http://localhost:1313/2022/06/26/1-avr-8-bit-gpio/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">AVR GCC AVRdude flashing using CLI (makefile example included)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>simple hello world program for atmega328*:
+#include &lt;avr/io.h&gt; #include &lt;util/delay.h&gt; /* Tells compiler the cpu speed to use for delays need to define it before importing util/delay.h otherwise define it with -DF_CPU=16000000UL during compilation */ #ifndef F_CPU #define F_CPU 16000000UL #endif /* PB5 has value of 5 */ #define LED PB5 #define SLEEP_MS 500 int main(void) { /* initializing PB5 which is connected to port 13 of uno as output*/ DDRB |= (1&lt;&lt;LED); while (1) { /* toggling the PB5 to alternate between on-off state*/ PORTB ^= (1&lt;&lt;LED); _delay_ms(SLEEP_MS); } } compiling using avr-gcc cli: avr gcc flags
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-25 08:11:32 +0000 +0000'>June 25, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to AVR GCC AVRdude flashing using CLI (makefile example included)" href="http://localhost:1313/2022/06/25/avr-gcc-avrdude-flashing-using-cli-makefile-example-included/"></a>
+</article>
+    </main>
+    
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+</body>
+
+</html>

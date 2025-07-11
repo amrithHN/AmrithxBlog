@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.148.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Embedded system Robotics notes</title>
+
+<meta name="description" content="Embedded system Robotics notes">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3beea2776320e39a6c8d0589cd10cf4cbbbe3ca9b6f0363cfeef1417ed39a195.css" integrity="sha256-O&#43;6id2Mg45psjQWJzRDPTLu&#43;PKm28DY8/u8UF&#43;05oZU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/feed.xml">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Embedded system Robotics notes (Alt + H)">Embedded system Robotics notes</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span class="active">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="">
+                    <span class="active"></span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="Blog">
+                    <span class="active">Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍">
+                    <span>🔍</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="first-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Union magic : union in C for packing
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &#34;stdint.h&#34; union { uint16_t ADC_16; struct{ uint8_t adc_low; uint8_t adc_high; }adc_struct; }ADC_16; void bitmagic() { ADC_16.adc_struct.adc_low = 0xAD; ADC_16.adc_struct.adc_high = 0xDE; printf(&#34;%x&#34;,*((uint16_t*)&amp;ADC_16)); } int main(void) { bitmagic(); return EXIT_SUCCESS; } The above code should output 0xDEAD value when run .
+Explanation:
+Union allocate the largest members size in memory , and all the members are stacked on top of each other this results in two struct fields pointing to the High byte of 16 bit union , while the other is the low byte
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-19 17:39:08 +0000 +0000'>February 19, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to Union magic : union in C for packing" href="http://localhost:1313/2025/02/19/union-magic-union-in-c-for-packing/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Bit magic : Bitfields in C struct
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &#34;stdint.h&#34; typedef struct{ uint8_t bit0:1; uint8_t bit1:1; uint8_t bit2:1; uint8_t bit3:1; uint8_t bit4:1; uint8_t bit5:1; uint8_t bit6:1; uint8_t bit7:1; uint8_t bit8:1; }mybits; void bitmagic(uint8_t var) { mybits *spi1; spi1=(mybits *)&amp;var; printf(&#34;%b&#34;,*((uint8_t *)spi1)); } int main(void) { bitmagic(0xA0); return EXIT_SUCCESS; } Bit fields are very useful to manipulate individual bits and packed with struct
+The above code demonstrates a simple example of such usage
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-19 17:17:30 +0000 +0000'>February 19, 2025</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to Bit magic : Bitfields in C struct" href="http://localhost:1313/2025/02/19/bit-magic-bitfields-in-c-struct/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Printf redirect to UART2 stm32
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>There are multiple ways to do this
+using _write() override use they below code to override _write in printf
+int _write(int fd, char* ptr, int len) { HAL_UART_Transmit(&amp;huart2, (uint8_t *) ptr, len, HAL_MAX_DELAY); return len; } Note: IF you do not see any output use the below code to clear buffer before calling any printf and after UART init
+setbuf(stdout, NULL); 2. Using Putchar method:
+#ifdef __GNUC__ #define PUTCHAR_PROTOTYPE int __io_putchar(int ch) #else #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f) #endif PUTCHAR_PROTOTYPE { HAL_UART_Transmit(&amp;huart2, (uint8_t *)&amp;ch, 1, HAL_MAX_DELAY); return ch; } 3. third method using SWV in stm32
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-04-26 11:35:14 +0000 +0000'>April 26, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to Printf redirect to UART2 stm32" href="http://localhost:1313/2023/04/26/printf-redirect-to-uart2-stm32/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">RiscV workshop day2
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>two files Sum1ton.c and load.a
+#include&lt;stdio.h&gt; extern int load(int x,int y); int main(){ int result=0; int count=9; result=load(0x0,count&#43;1); printf(&#34;Sum of number from 1to %d is %d\n&#34;,count,result); return 0; } .section .text .global load .type load, @function load: li a3,0x0 add a4,a0,zero # Iintialise sum register a4 with 0 register addressing mode add a2,a0,a1 # store count of 10 in a2 , al= 0xa from main add a3,a0,zero //init a3 to 0 loop: add a4,a3,a4 # a4= a3&#43;a4 addi a3,a3,1 # immediate addr mode add 1 count=count&#43;1 blt a3,a2,loop # blt = branch if less than a4&lt;a2 add a0,a4,zero ret </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-04-26 05:15:07 +0000 +0000'>April 26, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to RiscV workshop day2" href="http://localhost:1313/2023/04/26/riscv-workshop-day2/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">RiscV Workshop day 1
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>basic Gcc commands
+riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i filename.c
+riscv64-unknown-elf-objdump -d a.out | less
+simulation
+spike pk a.out
+spike -d pk a.out
+:until pc 0 100b0
+100b0 is the memory location to jump to example main for breakpoint reg 0 a2 // read valur of register a2
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-04-26 05:15:04 +0000 +0000'>April 26, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to RiscV Workshop day 1" href="http://localhost:1313/2023/04/26/riscv-workshop-day-1/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Print message using arguments with UART
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>va_list, va_start, va_end are used for variable argument from header “stdarg.h”
+vsprintf is used to combine the va_list arguments with the message passed to create a single string
+code:
+#include &#34;string.h&#34; #include &#34;stdlib.h&#34; #include &#34;stdarg.h&#34; #define DUART &amp;huart1 #define CUART &amp;huart2 void printmsg(char* msg,...){ #ifdef DEBUG_MSG unsigned char buf[100]; va_list args; //list of arguments va_start(args,msg); //point to first argument in list vsprintf(buf,msg,args); // replace each argument in msg with that of args HAL_UART_Transmit_IT(DUART,buf,strlen(buf)); va_end(args); #endif } </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-04-21 07:19:20 +0000 +0000'>April 21, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to Print message using arguments with UART" href="http://localhost:1313/2023/04/21/print-message-using-arguments-with-uart/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">ESP32 RGB led with PWM / FreeRTOS
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Simple code that demonstrate how rgb led is setup and how various colors can be set using the below code
+/* * rgb_led.c * * Created on: Jan 28, 2023 * Author: amrith */ #include&#34;rgb_led.h&#34; rgbled_handle_t rgb[3]; void led_init(){ rgb[0].gpio = RGB_LED_1; rgb[1].gpio = RGB_LED_2; rgb[2].gpio = RGB_LED_3; rgb[0].channel = LEDC_CHANNEL_0; rgb[1].channel = LEDC_CHANNEL_1; rgb[2].channel = LEDC_CHANNEL_2; rgb[0].mode = LEDC_HIGH_SPEED_MODE; rgb[1].mode = LEDC_HIGH_SPEED_MODE; rgb[2].mode = LEDC_HIGH_SPEED_MODE; rgb[0].timer = LEDC_TIMER_0; rgb[1].timer = LEDC_TIMER_0; rgb[2].timer = LEDC_TIMER_0; ledc_timer_config_t led_timer_conf = { .speed_mode = LEDC_HIGH_SPEED_MODE, .duty_resolution = LEDC_TIMER_8_BIT, .timer_num = LEDC_TIMER_0, .freq_hz = 100 }; ledc_timer_config(&amp;led_timer_conf); for(int i=0;i&lt;3;i&#43;&#43;){ ledc_channel_config_t led_channel_conf= { .gpio_num = rgb[i].gpio, .channel = rgb[i].channel, .timer_sel = rgb[i].timer, .duty = 0, .hpoint = 0, .intr_type = LEDC_INTR_DISABLE, .speed_mode = rgb[i].mode }; ledc_channel_config(&amp;led_channel_conf); } } void led_set_color(int red, int green , int blue){ ledc_set_duty(rgb[0].mode, rgb[0].channel, red); ledc_update_duty(rgb[0].mode,rgb[0].channel); ledc_set_duty(rgb[1].mode, rgb[1].channel, green); ledc_update_duty(rgb[1].mode,rgb[1].channel); ledc_set_duty(rgb[2].mode, rgb[2].channel, blue); ledc_update_duty(rgb[2].mode,rgb[2].channel); } /* * rgb_led.h * * Created on: Jan 28, 2023 * Author: amrith */ #ifndef MAIN_RGB_LED_H_ #define MAIN_RGB_LED_H_ #include &#34;driver/ledc.h&#34; #include &#34;esp_err.h&#34; #define RGB_LED_1 12 #define RGB_LED_2 14 #define RGB_LED_3 27 typedef struct { int gpio; int mode; int channel; int timer; }rgbled_handle_t; void led_init(); void led_set_color(int reg, int green , int blue); #endif /* MAIN_RGB_LED_H_ */ </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-02-24 02:56:17 +0000 +0000'>February 24, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to ESP32 RGB led with PWM / FreeRTOS" href="http://localhost:1313/2023/02/24/esp32-rgb-led-with-pwm-freertos/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">ESP32/RTOS -- simple rgb led blink
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Below is the code to control 3 gpios in rgb led in esp32
+/* Blink Example This example code is in the Public Domain (or CC0 licensed, at your option.) Unless required by applicable law or agreed to in writing, this software is distributed on an &#34;AS IS&#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. */ #include &lt;stdio.h&gt; #include &#34;freertos/FreeRTOS.h&#34; #include &#34;freertos/task.h&#34; #include &#34;driver/gpio.h&#34; #include &#34;esp_log.h&#34; #include &#34;sdkconfig.h&#34; void configure_led(void) { gpio_reset_pin(12); gpio_reset_pin(14); gpio_reset_pin(27); /* Set the GPIO as a push/pull output */ gpio_set_direction(12, GPIO_MODE_OUTPUT); gpio_set_direction(14, GPIO_MODE_OUTPUT); gpio_set_direction(27, GPIO_MODE_OUTPUT); } void app_main(void) { /* Configure the peripheral according to the LED type */ configure_led(); while (1) { /* Toggle the LED state */ vTaskDelay(1000 / portTICK_PERIOD_MS); gpio_set_level(14,0); gpio_set_level(27,1); vTaskDelay(1000 / portTICK_PERIOD_MS); gpio_set_level(27,0); gpio_set_level(12,1); vTaskDelay(1000 / portTICK_PERIOD_MS); gpio_set_level(12,0); gpio_set_level(14,1); } } </p>
+  </div>
+  <footer class="entry-footer"><span title='2023-01-28 04:29:23 +0000 +0000'>January 28, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to ESP32/RTOS -- simple rgb led blink" href="http://localhost:1313/2023/01/28/esp32-rtos-simple-rgb-led-blink/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">TMUX basics
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> install tmux using package manager , ex: sudo apt install tmux open a terminal , type tmux and hit enter , thats it youre in! Hierarchy in tmux: session &gt; window &gt; pane.Prefix for commands and help: Ctrl-b and sth: issue a command to tmux, inside tmux. Ctrl-b and ?: see all commands.Session commands: tmux: creates a new session and enters it. tmux new -s sessionname: creates a session with the specified name. tmux ls: lists all sessions. Ctrl-b and d: detach current session. Ctrl-b and D: detach selected session (interactive). tmux attach-session -t sessionNameOrNumber: attach to target session. tmux rename-session -t sessionNameOrNumber newName: renames sess. //to get rid of a session, close all panes.Window commands: Ctrl-b and c: create a window. Ctrl-b and w: choose a window from a list. Ctrl-b and &lt;number&gt;: switch to window &lt;number&gt;. Ctrl-b and p: switch to previous window (acc. to bottom bar). Ctrl-b and n: switch to next window (acc. to bottom bar). Ctrl-b , : Rename current window.Pane commands: Ctrl-d OR exit: kills the current pane, without asking for confirmation. Ctrl-b and x: quit. closes current pane after asking for confirmation. Ctrl-b and %: vertically splits the window into two panes. Ctrl-b and &#34;: horizontally splits the window into two panes. Ctrl-b and o: traverses panes. Ctrl-b and &lt;arrow keys=&#34;&#34;&gt;: traverses panes. Ctrl-b and ; : switches back and forth btw. the last two panes. Ctrl-b z: make pane temporarily go full screen - go back to normal size. Ctrl-b Ctrl-&lt;arrowkey&gt;: resize pane in a certain direction.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-10-31 13:21:53 +0000 +0000'>October 31, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to TMUX basics" href="http://localhost:1313/2022/10/31/tmux-basics/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Emacs basics
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Initial setup
+install emacs &gt; open terminal &gt; type emacs edit init.el inside ~/.emacs.d/ directory and add basic config to make it usable or use shared emacs config ( check the below youtube video for some basic setup ) ;;stop startup screen (setq inhibit-splash-screen t) ;;font (set-face-attribute &#39;default nil :font &#34;Source Code Pro 16&#34;) ;;window controls (add-hook &#39;window-setup-hook &#39;toggle-frame-maximized t) ;; remove menu tool scroll bar (menu-bar-mode -1) (tool-bar-mode -1) (scroll-bar-mode -1) ;; Display line numbers in every buffer (global-display-line-numbers-mode 1) ;;them directory (add-to-list &#39;custom-theme-load-path &#34;~/.emacs.d/themes&#34;) ;; Load the Modus Vivendi dark theme (load-theme &#39;dracula t) ;;C style (setq c-default-style &#34;linux&#34; c-basic-offset 4) ;;eletric pair mode (electric-pair-mode 1) note: C= ctrl key , M = alt key (meta key) , example : C-x C-f means press Ctrl&#43;x together release then press Ctrl&#43;f together
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-10-31 11:42:19 +0000 +0000'>October 31, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to Emacs basics" href="http://localhost:1313/2022/10/31/emacs-basics/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="http://localhost:1313/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+</body>
+
+</html>

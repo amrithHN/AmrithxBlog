@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linux on Embedded system Robotics notes</title>
+    <link>http://localhost:1313/category/linux/</link>
+    <description>Recent content in Linux on Embedded system Robotics notes</description>
+    <generator>Hugo -- 0.148.0</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 16 Jun 2022 03:38:04 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/category/linux/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Yocto Linux Qemu build basics</title>
+      <link>http://localhost:1313/2022/06/16/yocto-linux-qemu-build-basics/</link>
+      <pubDate>Thu, 16 Jun 2022 03:38:04 +0000</pubDate>
+       <guid isPermaLink="false">https://armphibian.wordpress.com/?p=86</guid> 
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/wp-content/uploads/2022/06/yocto_project_logo.svg_.png?w=1024&#34;&gt;Yocto project logo . Source: Wikipedia&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Using Ubuntu /Popos as a development&lt;/em&gt; machine&lt;/p&gt;
+&lt;p&gt;Install required packages for Ubuntu/Debian-based Linux&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;get install gawk wget git&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;core diffstat unzip texinfo gcc&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;multilib build&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;essential chrpath socat cpio python3 python3&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;pip python3&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;pexpect xz&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;utils debianutils iputils&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;ping libsdl1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;dev xterm
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;y zstd liblz4&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;tool&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Download poky build system source from git&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone git://git.yoctoproject.org/poky
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;cd into poky directory and run the init command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;source oe-init-build-env build-qemux86
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;the directory is switched to build-qemux86 (else cd into build-qemux86). Check the configuration file and set the machine to qemux86 (or qemux86-64 for 64bit)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to build Raspberry pi zero w BUILDROOT image</title>
+      <link>http://localhost:1313/2019/10/01/how-to-build-raspberry-pi-zero-w-buildroot-image/</link>
+      <pubDate>Tue, 01 Oct 2019 10:48:55 +0000</pubDate>
+       <guid isPermaLink="false">https://armphibian.wordpress.com/?p=17</guid> 
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/wp-content/uploads/2019/10/img_20191001_154014.jpg?w=1024&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Lately I was reading about embedded linux and came to know about two such custom embedded linux system build sytem the &lt;a href=&#34;https://www.yoctoproject.org/&#34;&gt;Yocto project&lt;/a&gt; and &lt;a href=&#34;https://www.buildroot.org/&#34;&gt;Buildroot&lt;/a&gt;.I wanted to make my own custom linux for raspberyy pi zero W i had in my *ahem* attic.&lt;/p&gt;
+&lt;p&gt;Requirements:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Raspberry pi zero w (ofcourse)&lt;/li&gt;
+&lt;li&gt;A PC (with ubuntu 18.04 or higher)&lt;/li&gt;
+&lt;li&gt;microSD card&lt;/li&gt;
+&lt;li&gt;microSD card reader&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;step-1-preparing-and-downloading-buildroot&#34;&gt;Step 1: Preparing and downloading BUILDROOT&lt;/h2&gt;
+&lt;p&gt;Open Ubuntu terminal (Ctrl+ALT+T) and type the below&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

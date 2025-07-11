@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.148.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Embedded system Robotics notes</title>
+
+<meta name="description" content="Embedded system Robotics notes">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3beea2776320e39a6c8d0589cd10cf4cbbbe3ca9b6f0363cfeef1417ed39a195.css" integrity="sha256-O&#43;6id2Mg45psjQWJzRDPTLu&#43;PKm28DY8/u8UF&#43;05oZU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/feed.xml">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Embedded system Robotics notes (Alt + H)">Embedded system Robotics notes</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span class="active">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="">
+                    <span class="active"></span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="Blog">
+                    <span class="active">Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍">
+                    <span>🔍</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[4] AVR C PWM (fast PWM, phase correct PWM  )
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I found this wonderful article and another one that explains the theory of PWM and the waveform and where it’s used. Since I don’t think I can improve on that I will leave it there for reference.
+Summary of the above article [ for lazy people like me ;-) ] :
+As the title suggests, there are three PWM modes: Fast PWM, phase correct PWM lastly frequency and phase correct PWM Using a sawtooth and TOP, MAX values pulse width gets manipulated It is used to control DC motor, servo motor etc FAST PWM Use any of the three timers for this purpose for hardware PWM generation . (software generation is another topic to be covered separately)
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-30 10:34:02 +0000 +0000'>June 30, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [4] AVR C PWM (fast PWM, phase correct PWM  )" href="http://localhost:1313/2022/06/30/4-avr-c-pwm-fast-pwm-phase-correct-pwm-and-frequency-phase-correct-pwm/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[3] AVR timer 16 bit in CTC mode - timer 1  atmega328
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> set Timer Control register 1 (TCCR1B since WGM12 should be 1 for CTC) load the value to be compared in Overflow Compare register (OCR1A) enable interrupt for OCIE register using Timer1 Mask register (TIMSK1) enable register and set prescalar (1024 in the below example) use ISR #include &lt;avr/io.h&gt; #include &lt;avr/interrupt.h&gt; //timer 1 16 bit void timer_config(){ TCCR1B|=(1&lt;&lt;WGM12); //CTC mode OCR1A=15625; TIMSK1=(1&lt;&lt;OCIE1A); sei(); TCCR1B|=(1&lt;&lt;CS12)|(1&lt;&lt;CS10);//prescalar 1024 TCCR1B&amp;=~(1&lt;&lt;CS11); } void led_config(){ //PB5 has led and logic analyser connected DDRB|=(1&lt;&lt;PB5); } int main(void){ led_config(); timer_config(); while(1){ } return 0; } ISR(TIMER1_COMPA_vect){ PORTB^=(1&lt;&lt;PB5); } ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-27 10:00:00 +0000 +0000'>June 27, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [3] AVR timer 16 bit in CTC mode - timer 1  atmega328" href="http://localhost:1313/2022/06/27/3-avr-timer-16-bit-in-ctc-mode-timer-1-atmega328/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[2] AVR timer/ counter -- CTC mode
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>There is a TCNTn called timer/Counter Register for each of the timers in AVR. For example, In Atmega32 we have TCNT0, TCNT1 and TCNT2. The TCNTn is basically a counter. It counts up with each pulse. It contains zero when reset. We can read or load any value in the TCNTn register.Each of the timer has TOV called Time Overflow. The TOVn flag is set when the timer overflows, where ‘n’ is the any number of a timer.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-26 10:53:47 +0000 +0000'>June 26, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [2] AVR timer/ counter -- CTC mode" href="http://localhost:1313/2022/06/26/2-avr-timer-counter-ctc-mode/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Saleae Logic Analyser Clone with Ubuntu Linux
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+The Saleae Logic is an 8 channel 24MHz logic analyser. Soon after its launch people in China opened them up to find that they are pretty simple inside and, as sure as night follows day, little workshops in Shenzen started producing clones impossibly cheaply and to be sold through eBay, AliExpress, etc
+Follow this link for excellent instruction on other distros and requirements
+Type the below command to check if the USB was connected successfully!
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-26 08:23:30 +0000 +0000'>June 26, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to Saleae Logic Analyser Clone with Ubuntu Linux" href="http://localhost:1313/2022/06/26/saleae-logic-analyser-clone-with-ubuntu-linux/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">[1] AVR 8 bit  - GPIO
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>For GPIO only these 3 registers are important for bit manipulation.
+For each port there are three important registers:
+The Data Direction Register (DDRx) determines whether the pins operate as inputs or outputs. The port output register (PORTx) determines the actual value set on each pin when it’s being used as an output. The port input register (PINx) is used for reading input values. x=B,C,D : example DDRB,DDRC,DDRD etc , PORTB,PORTC,PORTD etc , PINB,PINC,PIND etc.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-26 06:37:59 +0000 +0000'>June 26, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to [1] AVR 8 bit  - GPIO" href="http://localhost:1313/2022/06/26/1-avr-8-bit-gpio/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">AVR GCC AVRdude flashing using CLI (makefile example included)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>simple hello world program for atmega328*:
+#include &lt;avr/io.h&gt; #include &lt;util/delay.h&gt; /* Tells compiler the cpu speed to use for delays need to define it before importing util/delay.h otherwise define it with -DF_CPU=16000000UL during compilation */ #ifndef F_CPU #define F_CPU 16000000UL #endif /* PB5 has value of 5 */ #define LED PB5 #define SLEEP_MS 500 int main(void) { /* initializing PB5 which is connected to port 13 of uno as output*/ DDRB |= (1&lt;&lt;LED); while (1) { /* toggling the PB5 to alternate between on-off state*/ PORTB ^= (1&lt;&lt;LED); _delay_ms(SLEEP_MS); } } compiling using avr-gcc cli: avr gcc flags
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-25 08:11:32 +0000 +0000'>June 25, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to AVR GCC AVRdude flashing using CLI (makefile example included)" href="http://localhost:1313/2022/06/25/avr-gcc-avrdude-flashing-using-cli-makefile-example-included/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">ROS2 HUMBLE HAWKSBILL NOTES
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+Installation : follow the instruction: https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html
+Creating a workspace:
+mkdir -p ros2_ws/src &amp;&amp; cd ros2_ws colcon build source install/local_setup.bash &amp;&amp; source install/setup.bash Creating a package:(Python based)
+ament_python should have the following dir structure
+. └── my_project ├── CMakeLists.txt ├── package.xml └── my_project ├── __init__.py └── my_script.py cd ros2_ws/src ros2 pkg create &lt;pkg-name&gt; --dependencies [deps] --build-type ament_python cd ros2_demo_py/ rm CMakeLists.txt touch setup.py setup.cfg setup.cfg should have:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-24 08:12:24 +0000 +0000'>June 24, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to ROS2 HUMBLE HAWKSBILL NOTES" href="http://localhost:1313/2022/06/24/ros2-humble-hawksbill-notes/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">NVIDIA graphics not detected / device manager doesnt show on asus gaming laptop solution
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I had asus a17 ryzen 7 rtx3050 unfortunately after a while nvidia control panel was showing no graphics detected !
+solution:
+open asus “Armoury Crate software”
+goto system&gt; profile and change eco mode to standard mode or any other performance mode
+now reintall nvidia graphics driver and check device manager . All should be working fine!
+damn asus
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-21 17:27:03 +0000 +0000'>June 21, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to NVIDIA graphics not detected / device manager doesnt show on asus gaming laptop solution" href="http://localhost:1313/2022/06/21/nvidia-graphics-not-detected-device-manager-doesnt-show-on-ausus-gaming-laptop-solution/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">ROS 1 notes
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>https://www.ros.org/
+personal notes while learning ROS2
+ROS1 installation:
+Using Ubuntu as a base operating system, follow the installation guide on ROS wiki
+ROS1 Workspaces:
+Catkin is a build system used to make workspaces, packages and libraries for ROS
+To create a new workspace:
+$ mkdir -p ~/catkin_ws/src $ cd ~/catkin_ws/ $ catkin_init_workspace $ catkin_make or $ catkin build use this cheatsheet to refer catkin commands
+another interesting gist that has a summary of commands
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-21 03:09:17 +0000 +0000'>June 21, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to ROS 1 notes" href="http://localhost:1313/2022/06/21/ros-2-notes/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Yocto Linux Qemu build basics
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Yocto project logo . Source: Wikipedia
+Using Ubuntu /Popos as a development machine
+Install required packages for Ubuntu/Debian-based Linux
+sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping libsdl1.2-dev xterm sudo apt install -y zstd liblz4-tool Download poky build system source from git
+git clone git://git.yoctoproject.org/poky cd into poky directory and run the init command
+source oe-init-build-env build-qemux86 the directory is switched to build-qemux86 (else cd into build-qemux86). Check the configuration file and set the machine to qemux86 (or qemux86-64 for 64bit)
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-16 03:38:04 +0000 +0000'>June 16, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to Yocto Linux Qemu build basics" href="http://localhost:1313/2022/06/16/yocto-linux-qemu-build-basics/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/2/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/page/4/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+</body>
+
+</html>

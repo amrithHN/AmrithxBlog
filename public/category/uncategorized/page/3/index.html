@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Uncategorized | Embedded system Robotics notes</title>
+<meta name="keywords" content="">
+<meta name="description" content="Embedded system Robotics notes">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/category/uncategorized/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3beea2776320e39a6c8d0589cd10cf4cbbbe3ca9b6f0363cfeef1417ed39a195.css" integrity="sha256-O&#43;6id2Mg45psjQWJzRDPTLu&#43;PKm28DY8/u8UF&#43;05oZU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/category/uncategorized/feed.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/category/uncategorized/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Embedded system Robotics notes (Alt + H)">Embedded system Robotics notes</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="">
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="🔍">
+                    <span>🔍</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/category/">Category</a></div>
+  <h1>
+    Uncategorized
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/wp-content/uploads/2022/06/index.png" alt="index">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">AVR GCC AVRdude flashing using CLI (makefile example included)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>simple hello world program for atmega328*:
+#include &lt;avr/io.h&gt; #include &lt;util/delay.h&gt; /* Tells compiler the cpu speed to use for delays need to define it before importing util/delay.h otherwise define it with -DF_CPU=16000000UL during compilation */ #ifndef F_CPU #define F_CPU 16000000UL #endif /* PB5 has value of 5 */ #define LED PB5 #define SLEEP_MS 500 int main(void) { /* initializing PB5 which is connected to port 13 of uno as output*/ DDRB |= (1&lt;&lt;LED); while (1) { /* toggling the PB5 to alternate between on-off state*/ PORTB ^= (1&lt;&lt;LED); _delay_ms(SLEEP_MS); } } compiling using avr-gcc cli: avr gcc flags
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-25 08:11:32 +0000 +0000'>June 25, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to AVR GCC AVRdude flashing using CLI (makefile example included)" href="http://localhost:1313/2022/06/25/avr-gcc-avrdude-flashing-using-cli-makefile-example-included/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">ROS2 HUMBLE HAWKSBILL NOTES
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+Installation : follow the instruction: https://docs.ros.org/en/humble/Installation/Alternatives/Ubuntu-Development-Setup.html
+Creating a workspace:
+mkdir -p ros2_ws/src &amp;&amp; cd ros2_ws colcon build source install/local_setup.bash &amp;&amp; source install/setup.bash Creating a package:(Python based)
+ament_python should have the following dir structure
+. └── my_project ├── CMakeLists.txt ├── package.xml └── my_project ├── __init__.py └── my_script.py cd ros2_ws/src ros2 pkg create &lt;pkg-name&gt; --dependencies [deps] --build-type ament_python cd ros2_demo_py/ rm CMakeLists.txt touch setup.py setup.cfg setup.cfg should have:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-24 08:12:24 +0000 +0000'>June 24, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to ROS2 HUMBLE HAWKSBILL NOTES" href="http://localhost:1313/2022/06/24/ros2-humble-hawksbill-notes/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">NVIDIA graphics not detected / device manager doesnt show on asus gaming laptop solution
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I had asus a17 ryzen 7 rtx3050 unfortunately after a while nvidia control panel was showing no graphics detected !
+solution:
+open asus “Armoury Crate software”
+goto system&gt; profile and change eco mode to standard mode or any other performance mode
+now reintall nvidia graphics driver and check device manager . All should be working fine!
+damn asus
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-21 17:27:03 +0000 +0000'>June 21, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to NVIDIA graphics not detected / device manager doesnt show on asus gaming laptop solution" href="http://localhost:1313/2022/06/21/nvidia-graphics-not-detected-device-manager-doesnt-show-on-ausus-gaming-laptop-solution/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">ROS 1 notes
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>https://www.ros.org/
+personal notes while learning ROS2
+ROS1 installation:
+Using Ubuntu as a base operating system, follow the installation guide on ROS wiki
+ROS1 Workspaces:
+Catkin is a build system used to make workspaces, packages and libraries for ROS
+To create a new workspace:
+$ mkdir -p ~/catkin_ws/src $ cd ~/catkin_ws/ $ catkin_init_workspace $ catkin_make or $ catkin build use this cheatsheet to refer catkin commands
+another interesting gist that has a summary of commands
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-21 03:09:17 +0000 +0000'>June 21, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to ROS 1 notes" href="http://localhost:1313/2022/06/21/ros-2-notes/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">stm32f407vg-disc1 -clock configuration hse
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>code:
+/** ****************************************************************************** * @file : main.c * @author : Auto-generated by STM32CubeIDE * @brief : Main program body ****************************************************************************** * @attention * * &lt;h2&gt;&lt;center&gt;© Copyright (c) 2020 STMicroelectronics. * All rights reserved.&lt;/center&gt;&lt;/h2&gt; * * This software component is licensed by ST under BSD 3-Clause license, * the &#34;License&#34;; You may not use this file except in compliance with the * License. You may obtain a copy of the License at: * opensource.org/licenses/BSD-3-Clause * ****************************************************************************** */ #if !defined(__SOFT_FP__) &amp;&amp; defined(__ARM_FP) #warning &#34;FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use.&#34; #endif #define rcc 0x40023800UL #define rcc_cr_offset 0x00U #define rcc_cfgr_offset 0x08U #define rcc_cr (rcc&#43;rcc_cr_offset) #define rcc_cfgr (rcc&#43;rcc_cfgr_offset) #include &#34;stdint.h&#34; int main(void) { uint32_t *rccCR= (uint32_t *)rcc_cr; uint32_t *rccCfgr=(uint32_t *)rcc_cfgr; *rccCR|=(1&lt;&lt;16);//set 16 bit hseon while(!(*rccCR &amp; (1&lt;&lt;17)) ); *rccCfgr |=(0&lt;&lt;1);//0 bit set *rccCfgr &amp;=~(1&lt;&lt;1);//1 bit reset //mc01 *rccCfgr &amp;= ~(0x03&lt;&lt;21);//reset 22 21 bits *rccCfgr |=(1&lt;&lt;22); //set 22 bit /* Loop forever */ for(;;); } </p>
+  </div>
+  <footer class="entry-footer"><span title='2020-10-09 13:34:22 +0000 +0000'>October 9, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to stm32f407vg-disc1 -clock configuration hse" href="http://localhost:1313/2020/10/09/stm32f407vg-disc1-clock-configuration-hse/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Stm32f407vg-disc1 board -clock configuration (from scratch)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>IDE used:
+stm32 Cube IDE official
+step1 &gt; crete new project &gt; c program and dont select stm32 project under type
+types of clock:
+HSI- high speed internal HSE- high speed external PLL- phase locked loop HSI 16MHZ setup without pll
+code:
+/** @file : main.c @author : Auto-generated by STM32CubeIDE @brief : Main program body @attention * © Copyright (c) 2020 STMicroelectronics. All rights reserved. * This software component is licensed by ST under BSD 3-Clause license, the &#34;License&#34;; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause * */ if !defined(SOFT_FP) &amp;&amp; defined(__ARM_FP) #warning &#34;FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use.&#34; endif include &#34;stdint.h&#34; define rcc_base_addr 0x40023800UL define rcc_cr_offset 0x00U define rcc_cfgr_offset 0x08U define rcc_cr (rcc_base_addr&#43;rcc_cr_offset) define rcc_cfgr (rcc_base_addr&#43;rcc_cfgr_offset) int main(void) { //1. set rcc_cr hsion (bit 0) uint32_t *rcccrreg = (uint32_t *)rcc_cr; uint32_t *rcccfgrreg = (uint32_t *)rcc_cfgr; *rcccrreg |=(0x01&lt;&lt;0); //set hsion 0bit *rcccfgrreg &amp;=~(0x03&lt;&lt;21); //21 and 22 bit rcc_cfgr reset /* Loop forever */ for(;;); } </p>
+  </div>
+  <footer class="entry-footer"><span title='2020-10-09 12:52:37 +0000 +0000'>October 9, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to Stm32f407vg-disc1 board -clock configuration (from scratch)" href="http://localhost:1313/2020/10/09/stm32f407vg-disc1-board-clock-configuration-from-scratch/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">My First Blog Post
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+Be yourself; Everyone else is already taken.
+— Oscar Wilde.
+This is the first post on my new blog. I’m just getting this new blog going, so stay tuned for more. Subscribe below to get notified when I post new updates.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-10-01 10:39:46 +0000 +0000'>October 1, 2019</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to My First Blog Post" href="http://localhost:1313/2019/10/01/example-post/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Note:\
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Just a blog i use to write my stuff that may be useful to others too
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-10-01 10:39:44 +0000 +0000'>October 1, 2019</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;amrithmmh</footer>
+  <a class="entry-link" aria-label="post link to Note:\" href="http://localhost:1313/2019/10/01/welcome-to-my-blog/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/category/uncategorized/page/2/">
+      «&nbsp;Prev&nbsp;
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+</body>
+
+</html>

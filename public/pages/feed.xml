@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Pages on Embedded system Robotics notes</title>
+    <link>http://localhost:1313/pages/</link>
+    <description>Recent content in Pages on Embedded system Robotics notes</description>
+    <generator>Hugo -- 0.148.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Jan 2022 10:17:53 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/pages/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Amrith&#39;s Blog</title>
+      <link>http://localhost:1313/</link>
+      <pubDate>Sun, 02 Jan 2022 10:17:53 +0000</pubDate>
+       <guid isPermaLink="false">https://armphibian.wordpress.com/?page_id=61</guid> 
+      <description>&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title>Contact me</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Sun, 02 Jan 2022 10:17:52 +0000</pubDate>
+       <guid isPermaLink="false">https://armphibian.wordpress.com/contact/</guid> 
+      <description>&lt;p&gt;Let&amp;rsquo;s talk 👋 Don&amp;rsquo;t hesitate to reach out with the contact information below, or send a message using the form.&lt;/p&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/amrithhn/&#34;&gt;https://www.linkedin.com/in/amrithhn/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;send-me-a-message&#34;&gt;Send me a message&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 02 Jan 2022 10:17:51 +0000</pubDate>
+       <guid isPermaLink="false">https://armphibian.wordpress.com/about/</guid> 
+      <description>&lt;p&gt;I am an electronics engineer and a robotics enthusiast. Building stuff makes me happy and nothing can satisfy the outcome of a well-designed system that works without an issue.&lt;/p&gt;
+&lt;p&gt;learn more about me: &lt;a href=&#34;https://www.linkedin.com/in/amrithhn/&#34;&gt;https://www.linkedin.com/in/amrithhn/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;need to work on any electronics project/robotics / prototype? contact me on Upwork&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.upwork.com/freelancers/~011d6a3aef9611afcd&#34;&gt;https://www.upwork.com/freelancers/~011d6a3aef9611afcd&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

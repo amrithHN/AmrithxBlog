@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cortex-M3 on Embedded system Robotics notes</title>
+    <link>http://localhost:1313/tag/cortex-m3/</link>
+    <description>Recent content in Cortex-M3 on Embedded system Robotics notes</description>
+    <generator>Hugo -- 0.148.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 03 Oct 2022 13:44:53 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tag/cortex-m3/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[1] ARM Minimal Assembly code (cortex m3/m4 &#43; keil IDE)</title>
+      <link>http://localhost:1313/2022/10/03/1-arm-minimal-assembly-code-coretx-m3-m4-keil-ide/</link>
+      <pubDate>Mon, 03 Oct 2022 13:44:53 +0000</pubDate>
+       <guid isPermaLink="false">https://armphibian.wordpress.com/?p=372</guid> 
+      <description>&lt;p&gt;ARM processors have supported two different instruction sets: the &lt;strong&gt;ARM instructions&lt;/strong&gt; that are &lt;strong&gt;32 bits&lt;/strong&gt; and &lt;strong&gt;Thumb instructions&lt;/strong&gt; that are &lt;strong&gt;16 bits&lt;/strong&gt;. Thumb2 instructuction was introduced later which are 32bit instruction and the processor doesnt have to switch between modes to perform instructions. &lt;strong&gt;ARM is faster as it requires less clock cycles&lt;/strong&gt; for execution &lt;strong&gt;whereas Thumb instruction require high code density&lt;/strong&gt; (ex ARM perform an operation with 3 instructions whereas thumb can do the same with 2 thus saving code space but reducing operating speed since it is 16bit instruction).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
